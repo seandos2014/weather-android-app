@@ -1,6 +1,9 @@
 # weather-android-app
-This is a basic mobile app that tracks the weather forecast for select cities 
-A mobile version of the web app hosted here
+This project is a basic mobile app version of the initial web app hosted here
 [https://weatherbucket1d.s3.us-east-2.amazonaws.com/spa2.html]
+
+
+The code can be launched in Android Studio, IntelliJ or any other IDE
+or CLI environment supporting gradle build
 
 Thank you!
