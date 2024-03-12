@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Type">
+    <title>Weather App</title>
+    <link type="text/css" rel="stylesheet" href="file:///android_asset/index.css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      * {box-sizing: border-box;}
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .topnav {
+        height: 60px;
+        width: 100%;
+        margin-left: 2px;
+        margin-right: 2px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        overflow: hidden;
+        background-color: #08458A;
+        color: white;
+      }
+
+      .topnav a {
+        float: left;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 18px;
+      }
+
+      .topnav input[type=text] {
+        padding: 6px;
+        margin-top: 8px;
+        font-size: 17px;
+        border: none;
+      }
+
+      .topnav .search-container button {
+        float: right;
+        padding: 5px;
+        margin-top: 5px;
+        margin-right: 2px;
+        background: #ddd;
+        font-size: 12px;
+        border: none;
+        cursor: pointer;
+      }
+
+
+      .search-box{
+        float:right;
+        margin-top: 5px;
+      }
+
+      @media screen and (max-width: 600px) {
+        .topnav .search-container {
+          float: none;
+        }
+        .topnav a, .topnav input[type=text], .topnav .search-container button {
+          float: none;
+          display: block;
+          text-align: left;
+          width: 100%;
+          margin: 0;
+          padding: 14px;
+        }
+        .topnav input[type=text] {
+          border: 1px solid #ccc;
+        }
+      }
+      </style>
+
+</head>
+<body>
+<div class="topnav">
+    <a class="active" href="#name">Sample Weather</a>
+    <a style="float:right;"><i class="fa fa-search" onclick="handleHide()"></i></a>
+</div>
+
+<div class="app-row">
+    <a class="app-col active-nav" href="index1.html"></a>
+    <a class="app-col" href="index2.html"></a>
+    <a class="app-col" href="index3.html"></a>
+</div>
+<div id="page">
+    <div class="div-block-top">
+        <form action="#">
+                              <span class="search-span" style="display: none;">
+                              <button class="search-box" style="background-color: green;color: white;" onclick="handleSearch()">Go</button>
+                              <input class="search-box" type="text" placeholder="type city here..." id="search_value"/>
+                              </span>
+        </form>
+        <p class="t_heading"></p>
+        <div class="t_row"><div class="t_col">
+
+
+            <p class="t_temp"></p>
+            <p class="t_rain"></p>
+            <img class="t_icon" alt="icon"/>
+            <p class="t_time"></p>
+        </div>
+
+            <div class="t_col">
+                <p class="t_temp"></p>
+                <p class="t_rain"></p>
+                <img src="" class="t_icon" alt="icon"/>
+                <p class="t_time"></p>
+            </div>
+
+            <div class="t_col">
+                <p class="t_temp"></p>
+                <p class="t_rain"></p>
+                <img src="" class="t_icon" alt="icon"/>
+                <p class="t_time"></p>
+            </div>
+
+            <div class="t_col">
+                <p class="t_temp"></p>
+                <p class="t_rain"></p>
+                <img src="" class="t_icon" alt="icon"/>
+                <p class="t_time"></p>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+    <div class="div-block-bottom">
+        <p class="d_heading"></p>
+        <div class="d_col">
+
+            <div class="d_row">
+          <span class="d_span1">
+            <img class="d_icon"/>
+          </span>
+                <span class="d_span2">
+             <p class="d_date"></p>
+             <p class="d_desc"></p>
+          </span>
+                <span class="d_span3">
+             <p class="d_temp"></p>
+          </span>
+            </div>
+
+            <div class="d_row">
+          <span class="d_span1">
+            <img class="d_icon"/>
+          </span>
+                <span class="d_span2">
+             <p class="d_date"></p>
+             <p class="d_desc"></p>
+          </span>
+                <span class="d_span3">
+             <p class="d_temp"></p>
+          </span>
+            </div>
+
+            <div class="d_row">
+          <span class="d_span1">
+            <img class="d_icon"/>
+          </span>
+                <span class="d_span2">
+             <p class="d_date"></p>
+             <p class="d_desc"></p>
+          </span>
+                <span class="d_span3">
+             <p class="d_temp"></p>
+          </span>
+            </div>
+
+            <div class="d_row">
+          <span class="d_span1">
+            <img class="d_icon"/>
+          </span>
+                <span class="d_span2">
+             <p class="d_date"></p>
+             <p class="d_desc"></p>
+          </span>
+                <span class="d_span3">
+             <p class="d_temp"></p>
+          </span>
+            </div>
+
+            <div class="d_row">
+          <span class="d_span1">
+            <img class="d_icon"/>
+          </span>
+                <span class="d_span2">
+             <p class="d_date"></p>
+             <p class="d_desc"></p>
+          </span>
+                <span class="d_span3">
+             <p class="d_temp"></p>
+          </span>
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+    <div>
+        <span><p class="created-by" style="font-size: 12px;color: white;text-align: center;">Powered by Ade Dosunmu &#169 2024</p></span>
+    </div>
+
+</div>
+    <noscript>Please Enable JavaScript for ths page to work properly</noscript>
+    <script src="file:///android_asset/index.js"></script>
+    <script>
+  const _cities = new Array("LOS ANGELES", "BEIJING", "RIO DE JANEIRO");
+  var city = _cities[2];
+  fetchData(city);
+ document.getElementsByClassName('app-col')[0].innerHTML=city;
+ document.getElementsByClassName('app-col')[1].innerHTML=_cities[1];
+ document.getElementsByClassName('app-col')[2].innerHTML=_cities[0];
+
+ // handle search
+  handleSearch = () => {
+  search = document.getElementById('search_value').value;
+  console.log(search);
+  fetchData(search)
+  if(search!=="")
+  document.getElementsByClassName('app-col')[0].innerText=search.toUpperCase();
+  document.getElementById('search_value').value="";}
+</script>
+</body>
+</html>
+

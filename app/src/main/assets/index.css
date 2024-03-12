@@ -1,0 +1,187 @@
+/*========= Shared styles ==================*/
+body{
+background-color: #08758A;
+}
+
+#page{
+width: 100%;
+height: 100%;
+position : relative;
+overflow-y: auto;
+}
+
+#location{
+position: absolute;
+right:10px;
+top:15px;
+left:calc(50%-10px);
+right:10px;
+width: 50%;
+height: 20px;
+padding: 10px;
+background-color: white;
+color: #08758A;
+font-weight: bold;
+display: none;
+overflow-x:auto;
+text-align: justify;
+}
+
+.search-input-span{
+width: 80%;
+height: 100%;
+float:left;
+}
+
+.search-input{
+height: 100%;
+width: 100%;
+}
+
+.search-button-span{
+width: 20%;
+height: 100%;
+float: right;
+}
+
+.search-button{
+background-color: green;
+color: white;
+height: 100%;
+width: 100%;
+font: 8px;
+}
+
+.div-block-top{
+background-color: white;
+margin-top: 5px;
+padding: 10px;
+width: calc(100%-10px);
+height: 40%;
+border: 2px solid light-gray;
+overflow-x: auto;
+}
+
+.div-block-bottom{
+background-color: white;
+margin-top: 5px;
+padding: 10px;
+width: calc(100%-10px);
+height: 60%;
+border: 2px solid light-gray;
+overflow-y: auto;
+}
+
+.div_heading{
+margin-top: 20px;
+font-size:20px;
+font-weight: bold;
+}
+
+/*=========== Timely Updates =============*/
+.t_row{
+width: calc(100%-30px);
+margin-left:30px;
+}
+
+.t_row:after{
+content: "";
+display: table;
+clear: both;
+}
+
+.t_col{
+float: left;
+width: 25%;
+text-align: center;
+}
+
+.t_temp{
+content: "\00B0";
+margin-top: 10px;
+font-size:12px;
+font-weight: bold;
+text-align: center;
+}
+
+.t_rain{
+margin-top: 10px;
+font-size:12px;
+color: #08758A
+}
+
+.t_icon{
+margin-top: 10px;
+width: 20px;
+height: 20px;
+}
+
+.t_time{
+margin-top: 10px;
+font-size:12px;
+}
+
+
+
+/* ========== Daily Updates ================*/
+.d_col{
+width: 100%;
+max-height: 60%;
+}
+
+.d_row{
+width: 100%;
+height: 20%;
+display: flex;
+justify-content: center;
+text-align: center;
+}
+
+.d_span1{
+width: 25%;
+float:left;
+display: flex;
+justify-content: center;
+text-align: center;
+margin-top:20px;
+}
+
+.d_span2{
+width: 50%;
+float:left;
+}
+
+.d_span3{
+width: 25%;
+float:left;
+margin-top:20px;
+}
+
+.d_icon{
+margin-top: 10px;
+width: 20px;
+height: 20px;
+}
+
+.d_date{
+content: "\00B0";
+margin-top: 20px;
+font-size:12px;
+font-weight: bold;
+text-align: center;
+}
+
+.d_desc{
+content: "\00B0";
+margin-top: 20px;
+font-size:12px;
+text-align: center;
+}
+
+.d_temp{
+content: "\00B0";
+margin-top: 20px;
+font-size:12px;
+font-weight: bold;
+text-align: center;
+}

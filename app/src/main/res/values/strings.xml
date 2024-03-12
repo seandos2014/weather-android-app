@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Sample Weather</string>
+    <string name="tab1">RIO DE JANEIRO</string>
+    <string name="tab2">BEIJING</string>
+    <string name="tab3">LOS ANGELES</string>
+</resources>
