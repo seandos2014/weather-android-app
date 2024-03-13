@@ -3,6 +3,7 @@ package com.ade.myweatherapp;
 import android.graphics.Color;
 import android.os.Bundle;
 
+import com.ade.myweatherapp.controllers.WebViewController;
 import com.ade.myweatherapp.ui.main.PlaceholderFragment;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
@@ -38,12 +39,15 @@ private ActivityMainBinding binding;
         //tabs.setSelectedTabIndicatorColor(Color.RED);
         //TextView search = binding.title;
 
+        String url = "https://weatherbucket1d.s3.us-east-2.amazonaws.com/spa2.html";
         JSInterface jsInterface = new JSInterface();
+        WebViewController webViewController = new WebViewController();
         WebView pages = binding.pages;
         pages.getSettings().setSupportZoom(true);
         pages.getSettings().setJavaScriptEnabled(true);
         pages.addJavascriptInterface(jsInterface, "Android");
-        pages.loadUrl("https://weatherbucket1d.s3.us-east-2.amazonaws.com/spa2.html");
+        pages.setWebViewClient(webViewController);
+        pages.loadUrl(url);
 
 
     }
